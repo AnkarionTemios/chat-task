@@ -4,6 +4,9 @@ import { App } from './App'
 import * as serviceWorker from './serviceWorker'
 import './index.css'
 
+import 'uikit/dist/js/uikit.min.js'
+import 'uikit/dist/css/uikit.min.css'
+
 ReactDOM.render(<App />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change

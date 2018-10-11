@@ -1,0 +1,45 @@
+.login-form h1 {
+  font-size: 44px; }
+
+.login-form input {
+  outline: none;
+  border: 1px #edeff0 solid;
+  border-radius: 1px;
+  background-color: #edeff0;
+  font-size: 14px;
+  padding: 12.5px 1rem;
+  overflow: hidden; }
+  .login-form input:-moz-placeholder {
+    color: #000000;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal; }
+  .login-form input::-moz-placeholder {
+    color: #000000;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal; }
+  .login-form input:-ms-input-placeholder {
+    color: #000000;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal; }
+  .login-form input::placeholder {
+    color: #000000;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal; }
+
+.login-form input[value]:not([value='']):invalid {
+  color: #ea4d5f;
+  border-color: #ea4d5f;
+  outline: none; }
+
+.login-form button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border: 0.125rem solid #6e50d2;
+  padding: 5px 0;
+  background-color: #6e50d2;
+  color: #fdfdfd; }
