@@ -9,13 +9,13 @@ const userLoggedIn = user => ({
 const userLoggedOut = () => ({ type: actionTypes.USER_LOGGED_OUT })
 
 export const logIn = user => dispatch => {
-  localStorage.setItem('user', user)
   dispatch(userLoggedIn(user))
   dispatch(push('/'))
 }
 
 export const logOut = () => dispatch => {
-  localStorage.removeItem('user')
   dispatch(userLoggedOut())
   dispatch(push('/login'))
 }
+
+export const redirect = () => dispatch => dispatch(push('/login'))

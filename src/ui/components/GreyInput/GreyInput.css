@@ -1,7 +1,4 @@
-.login-form h1 {
-  font-size: 44px; }
-
-.login-form input {
+.grey-input {
   outline: none;
   border: 1px #edeff0 solid;
   border-radius: 1px;
@@ -9,28 +6,23 @@
   font-size: 14px;
   padding: 12.5px 1rem;
   overflow: hidden; }
-  .login-form input:-moz-placeholder {
+  .grey-input:-moz-placeholder {
     color: #000000;
     font-size: 14px;
     line-height: 14px;
     font-weight: normal; }
-  .login-form input::-moz-placeholder {
+  .grey-input::-moz-placeholder {
     color: #000000;
     font-size: 14px;
     line-height: 14px;
     font-weight: normal; }
-  .login-form input:-ms-input-placeholder {
+  .grey-input:-ms-input-placeholder {
     color: #000000;
     font-size: 14px;
     line-height: 14px;
     font-weight: normal; }
-  .login-form input::placeholder {
+  .grey-input::placeholder {
     color: #000000;
     font-size: 14px;
     line-height: 14px;
     font-weight: normal; }
-
-.login-form input[value]:not([value='']):invalid {
-  color: #ea4d5f;
-  border-color: #ea4d5f;
-  outline: none; }

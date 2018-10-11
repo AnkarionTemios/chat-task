@@ -6,6 +6,7 @@ import './index.css'
 
 import 'uikit/dist/js/uikit.min.js'
 import 'uikit/dist/css/uikit.min.css'
+import 'assets/font-awesome/fontawesome-all.css'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 

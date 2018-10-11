@@ -1,0 +1,17 @@
+.message {
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 2.5px; }
+  .message.selected {
+    background: #edf0f5; }
+  .message i {
+    cursor: pointer;
+    transition: .15s ease color; }
+    .message i:hover {
+      color: #000000; }
+  .message .name {
+    margin: 0;
+    color: #42648b; }
+  .message .text {
+    margin: 0;
+    color: #000000; }

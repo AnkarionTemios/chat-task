@@ -1,0 +1,17 @@
+.purple-button {
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border: 0.125rem solid #6e50d2;
+  padding: 5px 15px;
+  background-color: #6e50d2;
+  color: #fdfdfd;
+  transition: .15s ease background-color, .15s ease border-color;
+
+  &:disabled {
+    cursor: default;
+    background-color: lighten(#6e50d2, 10%);
+    border-color: lighten(#6e50d2, 10%);
+  }
+}

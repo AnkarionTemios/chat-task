@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Router, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 import { createStore, applyMiddleware } from 'redux'
@@ -12,7 +12,6 @@ import { rootReducer } from 'store'
 import createHistory from 'history/createBrowserHistory'
 
 import * as pages from 'pages'
-import { AuthenticatedRoute, UnauthenticatedRoute } from 'ui/base'
 
 const history = createHistory()
 
@@ -23,14 +22,26 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(thunk, historyMiddleware))
 )
 
+// const messages = [
+//   { user: "John", text: 'Hey everyone', id: 1 },
+//   { user: "Jack", text: 'Hey!', id: 2 },
+//   { user: "John", text: 'How is it going?', id: 3 },
+//   { user: "Jack", text: 'Great', id: 4 },
+// ]
+
+// localStorage.setItem('messages', JSON.stringify(messages))
+
+// const rooms = ["Flood", "Spam", "Work", "Launch"]
+// localStorage.setItem('rooms', JSON.stringify(rooms))
+
 export const App = () => (
   <Provider store={store}>
     <Router history={history}>
       <Switch>
         
-        <AuthenticatedRoute path="/" exact={ true } component={ pages.ChatPage } />
+        <Route path="/" exact={ true } component={ pages.ChatPage } />
 
-        <UnauthenticatedRoute path="/login" component={ pages.LoginPage } />
+        <Route path="/login" component={ pages.LoginPage } />
 
       </Switch>
     </Router>

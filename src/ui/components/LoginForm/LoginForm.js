@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { PurpleButton, GreyInput } from 'ui/components'
+
 import './LoginForm.css'
 
 export class LoginForm extends Component {
@@ -25,7 +27,7 @@ export class LoginForm extends Component {
         
           <div className="uk-flex uk-flex-column uk-flex-middle">
           
-            <input 
+            <GreyInput 
               type="text"
               placeholder="Enter your name"
               className="uk-width-1-2" 
@@ -33,13 +35,13 @@ export class LoginForm extends Component {
               onChange={ this.handleChange } 
             />
 
-            <button 
+            <PurpleButton 
               type="submit"
               className="uk-width-1-4 uk-margin-small-top" 
               disabled={ this.state.user.length < 3 } 
             >
               Log In
-            </button>
+            </PurpleButton>
           
           </div>
 

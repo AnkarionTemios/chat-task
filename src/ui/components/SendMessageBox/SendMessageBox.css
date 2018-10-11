@@ -1,0 +1,48 @@
+.send-message-box textarea {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  border: 1px solid #e4e6e9;
+  padding: 10px 0 0 10px;
+  border-radius: 6px;
+  color: #000000;
+  resize: none;
+  font-size: 16px; }
+  .send-message-box textarea:-moz-placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal; }
+  .send-message-box textarea::-moz-placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal; }
+  .send-message-box textarea:-ms-input-placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal; }
+  .send-message-box textarea::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: normal; }
+
+.send-message-box button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none; }
+  .send-message-box button i {
+    font-size: 30px;
+    color: #4A76A8;
+    transition: .15s ease color; }
+  .send-message-box button:disabled {
+    cursor: default; }
+    .send-message-box button:disabled i {
+      color: #7a9dc4; }

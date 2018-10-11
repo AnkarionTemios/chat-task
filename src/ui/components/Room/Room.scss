@@ -1,0 +1,18 @@
+.room {
+  padding: 15px 0;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten(#edf0f5, 10%);
+  }
+
+  p {
+    font-size: 20px;
+    margin: 0;
+    color: #000000;
+  }
+
+  &.active {
+    background: #edf0f5;
+  }
+}

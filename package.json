@@ -19,8 +19,6 @@
     "uikit": "^3.0.0-rc.17"
   },
   "scripts": {
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "start": "./node_modules/.bin/npm-run-all -p watch-css start-js",
     "build": "build-css build-js",
     "build-js": "react-scripts build",

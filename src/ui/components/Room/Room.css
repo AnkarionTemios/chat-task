@@ -1,0 +1,11 @@
+.room {
+  padding: 15px 0;
+  cursor: pointer; }
+  .room:hover {
+    background: white; }
+  .room p {
+    font-size: 20px;
+    margin: 0;
+    color: #000000; }
+  .room.active {
+    background: #edf0f5; }

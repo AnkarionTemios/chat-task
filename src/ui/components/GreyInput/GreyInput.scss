@@ -1,10 +1,5 @@
-.login-form {
-  h1 {
-    font-size: 44px;
-  }
-
-  input {
-    outline: none;
+.grey-input {
+  outline: none;
     border: 1px #edeff0 solid;
     border-radius: 1px;
     background-color: #edeff0;
@@ -39,11 +34,4 @@
       line-height: 14px;
       font-weight: normal;
     }
-  }
-
-  input[value]:not([value='']):invalid {
-    color: #ea4d5f;
-    border-color: #ea4d5f;
-    outline: none;
-  }
 }
