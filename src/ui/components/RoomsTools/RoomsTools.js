@@ -15,6 +15,11 @@ class RoomsTools extends Component {
 
   handleChange = event => this.setState({ newRoom: event.target.value })
 
+  handleClick = () => {
+    this.props.addRoom(this.state.newRoom)
+    this.setState({ newRoom: "" })
+  }
+
   render() {
     return (
       <div className="rooms-tools">
@@ -31,7 +36,7 @@ class RoomsTools extends Component {
           />
     
           <button 
-            onClick={ () => this.props.addRoom(this.state.newRoom) }
+            onClick={ this.handleClick }
             className="uk-width-1-4 uk-margin-small-left" 
             disabled={ this.state.newRoom.length < 3 } 
           >

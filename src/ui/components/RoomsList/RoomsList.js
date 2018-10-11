@@ -19,7 +19,7 @@ const RoomsList = ({ rooms, selectRoom, currentRoom }) => {
   )
   
   return (
-    <div className="rooms">
+    <div className="rooms-list">
       { rooms && rooms.map(renderRooms) }
     </div>
   )

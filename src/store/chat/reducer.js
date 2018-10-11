@@ -4,7 +4,7 @@ import { select } from 'helpers'
 const initialState = {
   messages: [],
   rooms: [],
-  currentRoom: "Flood",
+  currentRoom: null,
   selectedMessages: [],
   filteredMessages: [],
   query: ""

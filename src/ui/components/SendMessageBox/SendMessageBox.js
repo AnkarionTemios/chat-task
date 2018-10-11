@@ -21,8 +21,8 @@ class SendMessageBox extends Component {
   isValid() {
     return [
       this.state.message.length < 1,
-      this.props.currentRoom.length
-    ].every(isValid => isValid)
+      !this.props.currentRoom
+    ].some(isValid => isValid)
   }
 
   render() {

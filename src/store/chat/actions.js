@@ -77,7 +77,8 @@ export const deleteSelectedMessages = () => (dispatch, getState) => {
 
 export const addRoom = room => (dispatch, getState) => {
   const state = getState()
-  localStorage.setItem('rooms', JSON.stringify(state.chat.rooms.concat(room)))
+  const newRooms = state.chat.rooms ? state.chat.rooms.concat(room) : [room]
+  localStorage.setItem('rooms', JSON.stringify(newRooms))
   dispatch(fetchRooms())
 }
 
@@ -86,5 +87,5 @@ export const fetchMessages = () => (dispatch, getState) => {
   dispatch(fetchMessagesSuccess(JSON.parse(localStorage.getItem(state.chat.currentRoom))))
 }
 
-export const fetchRooms = () => dispatch => 
-  dispatch(fetchRoomsSuccess(JSON.parse(localStorage.getItem('rooms'))))
+export const fetchRooms = () => (dispatch, getState) =>
+  dispatch(fetchRoomsSuccess(JSON.parse(localStorage.getItem('rooms')))) 

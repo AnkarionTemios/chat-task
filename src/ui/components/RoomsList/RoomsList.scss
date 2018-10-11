@@ -1,6 +1,7 @@
-.rooms {
+.rooms-list {
   height: 585px;
   overflow-y: scroll;
+  overflow-x: hidden;
   border-right: 1px solid #e4e6e9;
 
   &::-webkit-scrollbar-track { 
@@ -8,7 +9,7 @@
     border-radius: 4px; 
   }
   
-  &::-webkit-scrollbar { 
+  &::-webkit-scrollbar {
     width: 6px; 
   }
   
