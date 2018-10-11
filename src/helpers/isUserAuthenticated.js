@@ -1,0 +1,1 @@
+export const isUserAuthenticated = () => !!localStorage.getItem('user') || !!sessionStorage.getItem('user')
