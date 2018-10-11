@@ -5,7 +5,7 @@ import { selectRoom } from 'store/chat'
 
 import { Room } from 'ui/components'
 
-import './Rooms.css'
+import './RoomsList.css'
 
 const RoomsList = ({ rooms, selectRoom, currentRoom }) => {
 
