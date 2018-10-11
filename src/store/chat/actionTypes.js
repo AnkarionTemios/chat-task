@@ -1,1 +1,2 @@
-export const USER_LOGGED_IN = "USER_LOGGED_IN"
+export const SEND_MESSAGE = "SEND_MESSAGE"
+export const DELETE_MESSAGE = "DELETE_MESSAGE"

@@ -1,15 +1,20 @@
 import * as actionTypes from './actionTypes'
 
 const initialState = {
-  user: null
+  messages: []
 }
 
-export const userReducer = (state = initialState, action) => {
+export const chatReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.USER_LOGGED_IN:
+    case actionTypes.SEND_MESSAGE:
       return {
         ...state,
-        user: action.user
+        messages: state.messages.concat(action.message)
+      }
+    case actionTypes.DELETE_MESSAGE:
+      return {
+        ...state,
+        messages: state.messages.filter(message => message !== action.message)
       }
     default: return state
   }

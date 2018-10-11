@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import { userReducer } from './chat'
+import { userReducer } from './authentication'
+import { chatReducer } from './chat'
 
 export default combineReducers({
-  user: userReducer
+  user: userReducer,
+  chat: chatReducer
 })
