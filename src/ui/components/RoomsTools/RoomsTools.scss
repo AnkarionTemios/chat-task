@@ -1,0 +1,26 @@
+.rooms-tools {
+  padding: 15px;
+  border-right: 1px solid #e4e6e9;
+  border-bottom: 1px solid #e4e6e9;
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+
+    i {
+      font-size: 30px;
+      color: #4A76A8;
+      transition: .15s ease color;
+    }
+
+    &:disabled {
+      cursor: default;
+
+      i {
+        color: lighten(#4A76A8, 15%);
+      }
+    }
+  }
+}

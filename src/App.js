@@ -22,18 +22,6 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(thunk, historyMiddleware))
 )
 
-// const messages = [
-//   { user: "John", text: 'Hey everyone', id: 1 },
-//   { user: "Jack", text: 'Hey!', id: 2 },
-//   { user: "John", text: 'How is it going?', id: 3 },
-//   { user: "Jack", text: 'Great', id: 4 },
-// ]
-
-// localStorage.setItem('messages', JSON.stringify(messages))
-
-// const rooms = ["Flood", "Spam", "Work", "Launch"]
-// localStorage.setItem('rooms', JSON.stringify(rooms))
-
 export const App = () => (
   <Provider store={store}>
     <Router history={history}>

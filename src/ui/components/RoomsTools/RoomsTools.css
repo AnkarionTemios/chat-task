@@ -1,0 +1,17 @@
+.rooms-tools {
+  padding: 15px;
+  border-right: 1px solid #e4e6e9;
+  border-bottom: 1px solid #e4e6e9; }
+  .rooms-tools button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none; }
+    .rooms-tools button i {
+      font-size: 30px;
+      color: #4A76A8;
+      transition: .15s ease color; }
+    .rooms-tools button:disabled {
+      cursor: default; }
+      .rooms-tools button:disabled i {
+        color: #7a9dc4; }

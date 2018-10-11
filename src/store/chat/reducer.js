@@ -3,9 +3,11 @@ import { select } from 'helpers'
 
 const initialState = {
   messages: [],
-  selectedMessages: [],
   rooms: [],
-  currentRoom: "Flood"
+  currentRoom: "Flood",
+  selectedMessages: [],
+  filteredMessages: [],
+  query: ""
 }
 
 export const chatReducer = (state = initialState, action) => {
@@ -20,20 +22,36 @@ export const chatReducer = (state = initialState, action) => {
         ...state,
         messages: action.messages
       }
+    case actionTypes.SELECT_ROOM:
+      return {
+        ...state,
+        currentRoom: action.room
+      }
     case actionTypes.SEND_MESSAGE:
       return {
         ...state,
-        messages: state.messages.concat(action.message)
+        messages: state.messages ? state.messages.concat(action.message) : [action.message]
       }
     case actionTypes.DELETE_MESSAGE:
       return {
         ...state,
-        messages: state.messages.filter(message => message.id !== action.message.id)
+        messages: state.messages.filter(message => message.id !== action.message)
       }
     case actionTypes.SELECT_MESSAGE:
       return {
         ...state,
         selectedMessages: select(state.selectedMessages, action.selectMessage)
+      }
+    case actionTypes.SEARCH_MESSAGE:
+      return {
+        ...state,
+        query: action.query,
+        filteredMessages: state.messages.filter(message => message.text.toLowerCase().match(action.query.toLowerCase()))
+      }
+    case actionTypes.CLEAN_SELECTED_MESSAGES:
+      return {
+        ...state,
+        selectedMessages: []
       }
     default: return state
   }

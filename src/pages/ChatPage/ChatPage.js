@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 import { connect } from 'react-redux'
-import { select, send, fetchMessages, fetchRooms } from 'store/chat'
-import { redirect, logOut } from 'store/authentication'
+import { selectMessage, fetchMessages, fetchRooms, deleteMessage } from 'store/chat'
+import { redirect } from 'store/authentication'
 
 import { Chatbox } from 'ui/components'
 
@@ -32,16 +32,14 @@ class ChatPage extends Component {
   }
 
   render() {
-    const { logOut, rooms, messages, sendMessage, selectMessage, selectedMessages } = this.props
+    const { messages, filteredMessages, deleteMessage, selectMessage, selectedMessages } = this.props
     return (
       <div className="chat-page">
         <Chatbox
-          logOut={ logOut }
-          rooms={ rooms }
-          messages={ messages }
-          sendMessage={ sendMessage }
           selectMessage={ selectMessage }
+          deleteMessage={ deleteMessage }
           selectedMessages={ selectedMessages } 
+          messages={ filteredMessages.length ? filteredMessages : messages }
         />
       </div>
     )
@@ -50,18 +48,17 @@ class ChatPage extends Component {
 
 const mapStateToProps = state => ({
   user: state.user.user,
-  rooms: state.chat.rooms,
   messages: state.chat.messages,
-  selectedMessages: state.chat.selectedMessages
+  selectedMessages: state.chat.selectedMessages,
+  filteredMessages: state.chat.filteredMessages
 })
 
 const mapDispatchToProps = dispatch => ({
   redirect: () => dispatch(redirect()),
-  fetchMessages: () => dispatch(fetchMessages()),
   fetchRooms: () => dispatch(fetchRooms()),
-  sendMessage: message => dispatch(send(message)),
-  selectMessage: message => dispatch(select(message)),
-  logOut: () => dispatch(logOut())
+  fetchMessages: () => dispatch(fetchMessages()),
+  deleteMessage: message => dispatch(deleteMessage(message)),
+  selectMessage: message => dispatch(selectMessage(message))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChatPage)

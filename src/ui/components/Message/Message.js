@@ -15,7 +15,7 @@ export class Message extends Component {
   handleMouseLeave = () => this.setState({ toolsAreVisible: false })
 
   render() {
-    const { name, text, id, selected, selectMessage } = this.props
+    const { name, text, id, selected, selectMessage, deleteMessage } = this.props
     return (
       <div 
         className={ classNames("message uk-margin-small-bottom", selected && "selected")}
@@ -25,11 +25,14 @@ export class Message extends Component {
       >
         
         <div className="uk-flex">
+
           <p className="name uk-width-expand">{ name }</p>
+
           { 
-            this.state.toolsAreVisible && 
-            <i className="fal fa-trash"></i>
+            (this.state.toolsAreVisible || selected) && 
+            <i onClick={ () => deleteMessage(id) } className="fal fa-trash"></i>
           }
+          
         </div>
         
         <p className="text">{ text }</p>

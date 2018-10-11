@@ -2,38 +2,6 @@
   height: 75vh;
   border: 1px solid #e4e6e9;
 
-  .rooms-tools {
-    padding: 15px;
-    border-right: 1px solid #e4e6e9;
-    border-bottom: 1px solid #e4e6e9;
-
-    button {
-      cursor: pointer;
-      border: none;
-      background: transparent;
-      outline: none;
-  
-      i {
-        font-size: 30px;
-        color: #4A76A8;
-        transition: .15s ease color;
-      }
-  
-      &:disabled {
-        cursor: default;
-  
-        i {
-          color: lighten(#4A76A8, 15%);
-        }
-      }
-    }
-  }
-
-  .messages-tools {
-    padding: 15px;
-    border-bottom: 1px solid #e4e6e9;
-  }
-
   .messages-field {
     height: 480px;
     padding: 15px;
@@ -57,7 +25,6 @@
       background: #6a7d9b; 
     }
   }
-
 
   .send-message-field {
     border-top: 1px solid #e4e6e9;
