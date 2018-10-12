@@ -12,25 +12,22 @@ class ChatPage extends Component {
 
   componentDidMount() {
     if (this.props.user) {
-      this.props.fetchMessages()
-      this.props.fetchRooms()
-
-      window.addEventListener("storage", () => {
-        this.props.fetchMessages()
-        this.props.fetchRooms()
-      })
+      this.fetchData()
+      window.addEventListener("storage", () => this.fetchData())
     } else {
       this.props.redirect()
     }
   }
 
   componentWillUnmount() {
-    window.removeEventListener("storage", () => {
-      this.props.fetchMessages()
-      this.props.fetchRooms()
-    })
+    window.removeEventListener("storage", () => this.fetchData())
   }
 
+  fetchData = () => {
+    this.props.fetchMessages()
+    this.props.fetchRooms()
+  }
+ 
   render() {
     const { messages, filteredMessages, deleteMessage, selectMessage, selectedMessages } = this.props
     return (

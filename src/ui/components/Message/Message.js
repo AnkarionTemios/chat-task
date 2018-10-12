@@ -36,6 +36,7 @@ export class Message extends Component {
         </div>
         
         <p className="text">{ text }</p>
+        
       </div>
     )
   }
